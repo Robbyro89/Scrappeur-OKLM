@@ -1,17 +1,30 @@
-<h1>Cryptomonnaie</h1>
-<p>Retrouvez le cours des cryptomonnaie en un rien de temps</p>
+<div class="navbar-header">
+  <nav class="navbar navbar-dark bg-dark box-shadow">
+    <div class="container d-flex justify-content-between">
+      <div class="navbar-brand">
+        <h1>Cryptomonnaie</h1>
+      </div>
+    </div>
+  </nav>
+</div>
 
-<form>
-  <%= form_tag(home_index_path, method: "get") do |f| %>
-      <%= label_tag :curency %><br>
-      <%= select_tag :currency, options_for_select(@namecur)  %>
-      <%= submit_tag :Submit, :class =>"w3-button w3-black"%>
-  <% end %>
-</form>
+<div class="container">
+  <div class="jumbotron">
+    <p>Retrouvez le cours des cryptomonnaie en un rien de temps</p>
 
-<%unless @currency == nil %>
-  <div class="w3-card w3-red w3-padding-16 w3-padding w3-margin">
-    <p> Currency :  <%= @currency %></p>
-    <p> Price : <%= @findprice %></p>
+    <form>
+      <%= form_tag(home_index_path, method: "get") do |f| %>
+          <%= label_tag :curency %><br><br>
+          <%= select_tag :currency, options_for_select(@namecur)  %>
+          <%= submit_tag :Submit, :class => "btn btn-primary-xs" %>
+      <% end %>
+    </form>
+<br>
+    <%unless @currency == nil %>
+      <div class="w3-card w3-red w3-padding-16 w3-padding w3-margin">
+        <p> Currency :  <%= @currency %></p>
+        <p> Price : <%= @findprice %></p>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>

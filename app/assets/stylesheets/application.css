@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   background-image: url("bitcoin.jpeg");
+   background-size: cover;
+   font-family: serif;
+ }
+
+ .navbar {
+   background-color: #FF8C00;
+   padding: 10px;
+ }
+
+.jumbotron {
+  text-align: center;
+  background-color: #FF8C00;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.btn {
+  background-color: black;
+  color: #FF8C00;
+}
